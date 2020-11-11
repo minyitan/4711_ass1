@@ -1,13 +1,13 @@
 <?php
 namespace App\Models;
-
+use App\Models\Simple\XMLModel;
 /*
  * Mock travel destination data.
  * Note that we don't have to extend CodeIgniter's model for now
  */
 
-class Singer {
-
+class Singer extends XMLModel{
+/*
     //mock data : an array of records
     protected $data = [
         '1' => [
@@ -52,5 +52,11 @@ class Singer {
         }
         return null;
     }
+ * */
+
+    protected $origin = WRITEPATH .'data/SingerData.xml';
+    protected $keyField = 'id';
+    protected $validationRules = [];
+
 
 }
